@@ -1,4 +1,12 @@
 from flask import Flask, render_template
+import os
+from dotenv import load_dotenv
+
+load_dotenv(".env")
+
+user_name = os.getenv("USER_NAME")
+email = os.getenv("EMAIL")
+password = os.getenv("PASSWORD")
 
 app=Flask(__name__)
 
